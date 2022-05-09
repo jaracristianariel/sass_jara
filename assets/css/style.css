@@ -1,0 +1,122 @@
+@media (min-width: 576px) {
+  .grid {
+    -ms-grid-columns: 80px auto 80px;
+        grid-template-columns: 80px auto 80px;
+    grid-auto-rows: 80px 40px auto 90px;
+        grid-template-areas: "encabezado encabezado encabezado" "navegador navegador navegador"     ". contenido ."     "pie pie pie";
+  }
+}
+
+@media (max-width: 575px) {
+  .grid {
+    -ms-grid-columns: 80px auto 80px;
+        grid-template-columns: 80px auto 80px;
+    grid-auto-rows: 80px 40px auto 80px;
+        grid-template-areas: "encabezado encabezado encabezado" "navegador navegador navegador" "contenido contenido conenido" "pie pie pie";
+  }
+}
+
+html {
+  height: 100%;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  gap: 5px;
+      grid-template-areas: "encabezado" "navegador" "contenido" "pie";
+}
+
+.grid .encabezado {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: encabezado;
+  background-color: black;
+}
+
+.grid .navegador {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: navegador;
+}
+
+.grid .contenido {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: contenido;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.grid .pie {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: pie;
+  background-color: black;
+}
+
+body {
+  background-image: url(../../assets/img/fondo001.jpg);
+  min-height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+body .card {
+  height: auto;
+  min-height: 100%;
+}
+
+body .card .card img {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+}
+
+.boton {
+  text-decoration: none;
+  padding: 10px;
+  color: #c8c8c8;
+}
+
+.boton:hover {
+  color: white;
+}
+
+.logoredes {
+  height: 50px;
+}
+
+.encabezado ul {
+  list-style-type: none;
+  text-decoration: none;
+  padding: 10px;
+  display: none;
+  font-size: 20px;
+  background-color: black;
+  color: #c8c8c8;
+  z-index: 1;
+}
+
+.encabezado li ul {
+  position: absolute;
+  min-width: auto;
+}
+
+.encabezado ul li:hover > ul {
+  display: block;
+}
+
+nav div a {
+  text-decoration: none;
+  color: #c8c8c8;
+  font-size: 25px;
+}
+
+.card img:hover {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,82 @@
+@import "_media";
+
+html {
+    height: 100%;
+}
+.grid {
+    display: grid;
+    gap: 5px;
+    grid-template-areas: 
+    "encabezado"
+    "navegador"
+    "contenido"
+    "pie";
+    .encabezado {
+        grid-area: encabezado;
+        background-color: black;
+    }
+    .navegador {
+        grid-area: navegador;
+    }
+    .contenido {
+        grid-area: contenido;
+        display: flex;
+    }
+    .pie {
+        grid-area: pie;
+        background-color: black;
+    }
+}
+body {
+    background-image: url(../../assets/img/fondo001.jpg);
+    min-height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    .card {
+        height: auto;
+        min-height: 100%;
+        .card img {
+            width: 100%;
+            height: auto;
+            padding: 10px;
+        }
+    }
+}
+.boton {
+    text-decoration: none;
+    padding: 10px;
+    color: #c8c8c8;
+  }
+  .boton:hover {
+    color: white;
+  }
+  .logoredes {
+    height: 50px;
+  }
+  .encabezado ul {
+    list-style-type: none;
+    text-decoration: none;
+    padding: 10px;
+    display: none;
+    font-size: 20px;
+    background-color: black;
+    color: #c8c8c8;
+    z-index: 1;
+   }
+  .encabezado li ul{
+    position: absolute;
+    min-width: auto;
+  }
+  .encabezado ul li:hover >ul {
+    display: block;
+  }
+  nav div a {
+    text-decoration: none;
+    color: #c8c8c8;
+    font-size: 25px;
+  }
+  .card img:hover {
+    transform: scale(1.01);
+}
+  
